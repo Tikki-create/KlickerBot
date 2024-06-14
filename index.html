@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Кликер</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .button {
+    width: 200px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .counter {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="counter">Клики: 0</div>
+  <button class="button">Кликни меня!</button>
+</div>
+
+<script>
+  const counterElement = document.querySelector('.counter');
+  const buttonElement = document.querySelector('.button');
+  let clicks = 0;
+
+  buttonElement.addEventListener('click', () => {
+    clicks++;
+    counterElement.textContent = `Клики: ${clicks}`;
+  });
+</script>
+</body>
+</html>
